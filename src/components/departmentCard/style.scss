@@ -1,0 +1,137 @@
+.department-container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin-top: 24px;
+  
+    ul {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      padding: 0;
+      list-style: none;
+    }
+  
+    li {
+      text-align: center;
+      position: relative;
+  
+      &:after {
+        content: "";
+        position: absolute;
+        width: calc(50% + 14px);
+        height: 2px;
+        background-color: #c5cae9;
+        top: 66px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-left: 1px;
+      }
+    }
+  
+    .person-card {
+      display: inline-block;
+      padding: 8px 16px;
+      border: 2px solid #c5cae9;
+      margin-bottom: 50px;
+      position: relative;
+      min-width: 148px;
+      font-size: 16px;
+      font-weight: 500;
+      color: #000;
+      border-radius: 4px;
+  
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 28px;
+        background-color: #c5cae9;
+        left: 50%;
+      }
+  
+      &:before {
+        top: 100%;
+      }
+  
+      &:after {
+        bottom: 100%;
+      }
+    }
+  
+    .level-1 {
+      .person-card {
+        background-color: #1a237e;
+        color: #fff;
+  
+        &:after {
+          content: none;
+        }
+      }
+    }
+  
+    .level-2 {
+      .person-card {
+        background-color: #303f9f;
+        &:after{
+            content: "";
+            height: 24px;
+        }
+      }
+    }
+  
+    .level-3 {
+       height: 100%;
+       &:after{
+        width: 2px;
+        height: calc(100% - 52px);
+        top: 38px;
+        left: 16px;
+        transform: none;
+       }
+       .person-card {
+           background-color: #3f51b5;
+           margin-bottom: 36px;
+           &:before {
+            bottom: 100%;
+            top: unset;
+            height: 24px;
+          }
+      }
+  
+      > ul {
+        display: block;
+  
+        li {
+          margin-left: 38px;
+          min-width: 100px;
+  
+          .person-card:before {
+            height: 2px;
+            width: 22px;
+            right: 100%;
+            left: unset;
+            top: 50%;
+          }
+        }
+      }
+    }
+  
+    .level-4 {
+      .person-card {
+        margin-bottom: 24px;
+        background-color: #7986cb;
+        min-width: 110px;
+      }
+  
+      &:after , .person-card:after{
+        content: none;
+      }
+    }
+  }
+  

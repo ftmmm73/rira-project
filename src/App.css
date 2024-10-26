@@ -1,0 +1,12 @@
+body{
+  background-color: #202020;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-size: 0.875rem;
+}
+@import "../src/components/departmentCard/style.scss";
+
+.App{
+  padding: 16px;
+}
+ 
+
